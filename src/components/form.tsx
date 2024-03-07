@@ -201,6 +201,7 @@ const Form: React.FC<FormProps> = ({ onAddToQueue }) => {
                     handlePhotoChange={handlePhotoChange}
                     disabled={processing} />
                 <Dropdown
+                    label="Biisi*"
                     songs={formData.songs}
                     selected={formData.selectedSong} onSelect={(selection: string) => {
                         setFormData(prevFormData => ({
@@ -208,10 +209,10 @@ const Form: React.FC<FormProps> = ({ onAddToQueue }) => {
                             selectedSong: selection,
                         }));
                     }} disabled={processing}
-                    label="Biisi*"
                 />
                 {submitted && errors.song && <p className={styles.error}>{errors.song}</p>}
                 <RadioButton
+                    label="Sävellaji*"
                     selectedValue={formData.key}
                     setSelectedValue={(key: string) => {
                         setFormData(prevFormData => ({
@@ -220,7 +221,6 @@ const Form: React.FC<FormProps> = ({ onAddToQueue }) => {
                         }));
                     }}
                     disabled={processing}
-                    header="Sävellaji*"
                 />
                 {submitted && errors.key && <p className={styles.error}>{errors.key}</p>}
                 <Checkbox

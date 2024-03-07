@@ -73,9 +73,10 @@ const Dropdown: React.FC<DropdownProps> = ({ label, songs, selected, onSelect, d
   // handleDropdownClick
 
   const handleDropdownClick = () => {
-    if (!disabled) {
+    
+    if (!disabled) 
       setShowDropdown(!showDropdown);
-    }
+    
   };
 
   return (
