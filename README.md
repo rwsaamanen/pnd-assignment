@@ -1,3 +1,23 @@
+## 1. Clone your repository to your local machine
+
+```sh
+git clone https://github.com/rwsaamanen/pnd-assignment.git
+```
+
+## 2. Install dependencies
+
+The project is set up with npm. Navigate to root directory and install the dependencies by running:
+
+```sh
+npm install
+```
+
+## 3. Start localserver
+
+```sh
+npm run dev
+```
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
