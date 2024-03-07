@@ -82,7 +82,7 @@ const Form: React.FC<FormProps> = ({ onAddToQueue }) => {
             newErrors["key"] = "Valitse sävellaji";
 
         if (!formData.consent)
-            newErrors["consent"] = "Hyväksy tietojen tallennus.";
+            newErrors["consent"] = "Hyväksy tietojen tallennus";
 
         setErrors(newErrors);
 
