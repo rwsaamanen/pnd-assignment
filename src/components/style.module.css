@@ -1,0 +1,408 @@
+/* Navbar */
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #ccc;
+}
+
+.link,
+.link:visited {
+    color: #000000;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.link:hover {
+    color: #2563eb;
+    text-decoration: underline;
+}
+
+/* Form */
+
+.form {
+    max-width: 380px;
+    margin: auto;
+    padding: 40px;
+}
+
+.formGroup {
+    margin-bottom: 20px;
+}
+
+.formGroup p {
+    font-size: small;
+}
+
+.formGroup input {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #4a4a4a;
+    border-radius: 5px;
+    outline: none;
+}
+
+/* Photo upload */
+
+.fileUpload {
+    cursor: pointer;
+    display: block;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    50% {
+        transform: scale(.95);
+        opacity: 0.7;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.uploadWrapper {
+    border: 1px dashed #4a4a4a;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.uploadWrapper:hover {
+    animation: pulse 1s infinite;
+}
+
+.hiddenInput {
+    display: none;
+}
+
+.uploadedImage {
+    max-width: 100%;
+    height: auto;
+    margin-top: 10px;
+}
+
+.imagePreviewWrapper {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.imagePreview {
+    max-width: 50%;
+    height: auto;
+    object-fit: cover;
+    border: 5px solid #4a4a4a;
+    border-radius: 5px;
+}
+
+.fileInputWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.fileButtonContainer {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+}
+
+.fileRemoveButton {
+    color: #4a4a4a;
+    border: none;
+    font-weight: bold;
+    font-size: x-small;
+    padding: 2px 4px;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+}
+
+.fileRemoveButton:hover {
+    text-decoration: underline;
+}
+
+/* Dropdown */
+
+.dropdown {
+    width: 100%;
+    position: relative;
+    user-select: none;
+}
+
+.dropdown .dropdownButton {
+    color: #4a4a4a;
+    border-radius: 5px;
+}
+
+.dropdownButton {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #a4a4a4;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+.dropdown .dropdownContent {
+    position: absolute;
+    left: 0;
+    top: 110%;
+    background-color: #ffffff;
+    color: #a4a4a4;
+    width: 100%;
+    border-radius: 5px;
+    outline: 1px solid #4a4a4a;
+}
+
+.dropdown .dropdownContent .dropdownItem {
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.dropdown .dropdownContent .dropdownItem:hover {
+    background-color: #eee;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+.dropdownArrow {
+    transition: transform 0.3s ease;
+}
+
+.dropdownArrowRotate {
+    transform: rotate(180deg);
+}
+
+.dropdownSearch {
+    width: 100%;
+    padding: 10px 0px;
+    border: none;
+    border-bottom: 1px solid #4a4a4a;
+    background-color: #eee;
+    border-radius: 0;
+    margin: 0;
+}
+
+.dropdownSearch:focus {
+    background-color: #ffffff;
+}
+
+.dropdownSongName {
+    color: #000000;
+    font-size: 0.9em;
+}
+
+.dropdownArtistName {
+    color: #6a6a6a;
+    font-size: 0.7em;
+}
+
+/* Radio button */
+
+.radioButton {
+    display: flex;
+    outline: 1px solid #4a4a4a;
+    border-radius: 5px;
+    overflow: hidden;
+    width: 100%;
+    user-select: none;
+}
+
+.radioButton input {
+    display: none;
+}
+
+.radioButton label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    padding: 10px 0;
+    margin: 0;
+}
+
+.radioButton label:hover,
+.radioButton input:checked+label {
+    background-color: #128559;
+    color: #ffffff;
+}
+
+.radioButton label:not(:last-child) {
+    border-right: 1px solid #4a4a4a;
+}
+
+.radioButton label:first-child {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.radioButton label:last-child {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+/* Checkbox */
+
+.checkboxContainer {
+    user-select: none;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.hiddenCheckbox {
+    display: none;
+}
+
+.checkbox {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    border: 1px solid #4a4a4a;
+    border-radius: 5px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.checkbox.checked::after {
+    content: '✓';
+    color: #000000;
+}
+
+/* Button */
+
+.button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    width: 150px;
+    padding: 7px;
+    border: none;
+    border-radius: 5px;
+    background-color: #128559;
+    color: #ffffff;
+    font-size: 16px;
+    cursor: pointer;
+    outline: none;
+    height: 35px;
+}
+
+.button:hover {
+    background-color: #0d6a4f;
+}
+
+/* Loading animation */
+
+.loader {
+    display: flex;
+    justify-content: center;
+    width: 10px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    animation: l5 1s infinite linear alternate;
+}
+
+@keyframes l5 {
+    0% {
+        box-shadow: 20px 0 #fff, -20px 0 #fff2;
+        background: #fff;
+    }
+
+    33% {
+        box-shadow: 20px 0 #fff, -20px 0 #fff2;
+        background: #fff2;
+    }
+
+    66% {
+        box-shadow: 20px 0 #fff2, -20px 0 #fff;
+        background: #fff2;
+    }
+
+    100% {
+        box-shadow: 20px 0 #fff2, -20px 0 #fff;
+        background: #fff;
+    }
+}
+
+/* Error message */
+
+.error {
+    color: red;
+    margin-top: 5px;
+    font-weight: bold;
+    font-size: small;
+}
+
+/* Disable style */
+
+.disabled {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+/* For queue component */
+
+.headerQueue {
+    text-decoration: underline;
+}
+
+.queue {
+    max-width: 380px;
+    margin: auto;
+    padding: 20px;
+}
+
+.list {
+    list-style: none;
+    padding: 0;
+}
+
+.listItem {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.orderNumber {
+    font-size: 1em;
+    color: #aaa;
+    margin-right: 10px;
+}
+
+.name {
+    font-weight: bold;
+    font-size: 1em;
+    flex-grow: 1;
+    color: #4a4a4a;
+}
+
+.songInfo {
+    flex-grow: 2;
+    text-align: right;
+}
+
+.songName {
+    font-size: 0.9em;
+    color: #4a4a4a;
+}
+
+.artistName {
+    font-size: 0.75em;
+}
